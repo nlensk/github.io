@@ -21,6 +21,8 @@
             margin: 20px;
             border-radius: 10px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+            position: relative;
+            overflow: hidden;
         }
         h1, h2 {
             color: #FFD700;
@@ -45,10 +47,28 @@
         .social-links a:hover {
             background: #006400;
         }
+        .decor-leaf {
+            position: absolute;
+            width: 100px;
+            height: auto;
+        }
+        .leaf-top-left {
+            top: -20px;
+            left: -20px;
+            transform: rotate(30deg);
+        }
+        .leaf-bottom-right {
+            bottom: -20px;
+            right: -20px;
+            transform: rotate(-30deg);
+        }
     </style>
 </head>
 <body>
     <div class="container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Leaf_icon.svg" class="decor-leaf leaf-top-left" alt="Leaf">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Leaf_icon.svg" class="decor-leaf leaf-bottom-right" alt="Leaf">
+        
         <h1>John Doe</h1>
         <p>Web Developer | Designer | Freelancer</p>
         
