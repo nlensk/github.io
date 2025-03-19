@@ -3,31 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jungle Themed CV</title>
+    <title>Nadia Lenskaia</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: url('https://source.unsplash.com/1600x900/?jungle,forest') no-repeat center center/cover;
+            background: #f4f4f4;
             display: flex;
             justify-content: center;
-            color: #fff;
-            position: relative;
-            overflow: hidden;
         }
         .container {
             max-width: 800px;
-            background: rgba(34, 49, 34, 0.9);
+            background: white;
             padding: 20px;
             margin: 20px;
             border-radius: 10px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-            position: relative;
-            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         h1, h2 {
-            color: #FFD700;
+            color: #333;
         }
         .section {
             margin-bottom: 20px;
@@ -41,43 +36,20 @@
         .social-links a {
             text-decoration: none;
             color: white;
-            background: #228B22;
+            background: #0073b1;
             padding: 10px 15px;
             border-radius: 5px;
             font-size: 18px;
         }
         .social-links a:hover {
-            background: #006400;
-        }
-        .jungle-element {
-            position: absolute;
-            width: 120px;
-            height: auto;
-        }
-        .vine {
-            width: 200px;
-            position: absolute;
-        }
-        .leaf-top-left {
-            top: -20px;
-            left: -20px;
-            transform: rotate(30deg);
-        }
-        .leaf-bottom-right {
-            bottom: -20px;
-            right: -20px;
-            transform: rotate(-30deg);
+            background: #005582;
         }
     </style>
 </head>
 <body>
-    <img src="https://cdn.pixabay.com/photo/2016/03/09/09/17/leaf-1246221_1280.png" class="vine" style="top: 0; left: 50px;" alt="Vine">
-    <img src="https://cdn.pixabay.com/photo/2013/07/13/12/37/leaf-159126_1280.png" class="jungle-element leaf-top-left" alt="Leaf">
-    <img src="https://cdn.pixabay.com/photo/2013/07/13/12/37/leaf-159126_1280.png" class="jungle-element leaf-bottom-right" alt="Leaf">
-    
     <div class="container">
-        <h1>John Doe</h1>
-        <p>Web Developer | Designer | Freelancer</p>
+        <h1>Nadia Lenskaia</h1>
+        <p>Web Developer | Microbioligist | Freeloader</p>
         
         <div class="section">
             <h2>Profile</h2>
@@ -106,14 +78,13 @@
 
         <div class="section">
             <h2>Contact</h2>
-            <p>Email: johndoe@example.com</p>
-            <p>Phone: +123 456 7890</p>
+            <p>Email: nadialensk2@gmail.com</p>
         </div>
 
         <div class="social-links">
-            <a href="#" onclick="openLink('https://www.linkedin.com/in/johndoe')">LinkedIn</a>
-            <a href="#" onclick="openLink('https://github.com/johndoe')">GitHub</a>
-            <a href="#" onclick="openLink('https://twitter.com/johndoe')">Twitter</a>
+            <a href="#" onclick="openLink('https://www.linkedin.com/in/johndoe')">Instagram</a>
+            <a href="#" onclick="openLink('https://github.com/nlensk')">GitHub</a>
+            <a href="#" onclick="openLink('https://twitter.com/johndoe')">Reddit</a>
         </div>
     </div>
 
@@ -121,20 +92,6 @@
         function openLink(url) {
             window.open(url, '_blank');
         }
-        
-        function addFallingLeaves() {
-            for (let i = 0; i < 5; i++) {
-                let leaf = document.createElement("img");
-                leaf.src = "https://cdn.pixabay.com/photo/2013/07/13/12/37/leaf-159126_1280.png";
-                leaf.classList.add("jungle-element");
-                leaf.style.left = Math.random() * window.innerWidth + "px";
-                leaf.style.top = "-50px";
-                leaf.style.animation = `falling-leaf ${Math.random() * 5 + 3}s linear infinite`;
-                document.body.appendChild(leaf);
-            }
-        }
-
-        addFallingLeaves();
     </script>
 </body>
 </html>
