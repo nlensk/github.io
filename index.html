@@ -9,7 +9,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: url('https://source.unsplash.com/1600x900/?jungle') no-repeat center center/cover;
+            background: url('https://source.unsplash.com/1600x900/?jungle,forest') no-repeat center center/cover;
             display: flex;
             justify-content: center;
             color: #fff;
@@ -71,9 +71,9 @@
     </style>
 </head>
 <body>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Vine_icon.svg" class="vine" style="top: 0; left: 50px;" alt="Vine">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Leaf_icon.svg" class="jungle-element leaf-top-left" alt="Leaf">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Leaf_icon.svg" class="jungle-element leaf-bottom-right" alt="Leaf">
+    <img src="https://cdn.pixabay.com/photo/2016/03/09/09/17/leaf-1246221_1280.png" class="vine" style="top: 0; left: 50px;" alt="Vine">
+    <img src="https://cdn.pixabay.com/photo/2013/07/13/12/37/leaf-159126_1280.png" class="jungle-element leaf-top-left" alt="Leaf">
+    <img src="https://cdn.pixabay.com/photo/2013/07/13/12/37/leaf-159126_1280.png" class="jungle-element leaf-bottom-right" alt="Leaf">
     
     <div class="container">
         <h1>John Doe</h1>
@@ -125,7 +125,7 @@
         function addFallingLeaves() {
             for (let i = 0; i < 5; i++) {
                 let leaf = document.createElement("img");
-                leaf.src = "https://upload.wikimedia.org/wikipedia/commons/3/3a/Leaf_icon.svg";
+                leaf.src = "https://cdn.pixabay.com/photo/2013/07/13/12/37/leaf-159126_1280.png";
                 leaf.classList.add("jungle-element");
                 leaf.style.left = Math.random() * window.innerWidth + "px";
                 leaf.style.top = "-50px";
