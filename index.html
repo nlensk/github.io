@@ -13,6 +13,8 @@
             display: flex;
             justify-content: center;
             color: #fff;
+            position: relative;
+            overflow: hidden;
         }
         .container {
             max-width: 800px;
@@ -47,10 +49,14 @@
         .social-links a:hover {
             background: #006400;
         }
-        .decor-leaf {
+        .jungle-element {
             position: absolute;
-            width: 100px;
+            width: 120px;
             height: auto;
+        }
+        .vine {
+            width: 200px;
+            position: absolute;
         }
         .leaf-top-left {
             top: -20px;
@@ -65,10 +71,11 @@
     </style>
 </head>
 <body>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Vine_icon.svg" class="vine" style="top: 0; left: 50px;" alt="Vine">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Leaf_icon.svg" class="jungle-element leaf-top-left" alt="Leaf">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Leaf_icon.svg" class="jungle-element leaf-bottom-right" alt="Leaf">
+    
     <div class="container">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Leaf_icon.svg" class="decor-leaf leaf-top-left" alt="Leaf">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Leaf_icon.svg" class="decor-leaf leaf-bottom-right" alt="Leaf">
-        
         <h1>John Doe</h1>
         <p>Web Developer | Designer | Freelancer</p>
         
@@ -114,6 +121,20 @@
         function openLink(url) {
             window.open(url, '_blank');
         }
+        
+        function addFallingLeaves() {
+            for (let i = 0; i < 5; i++) {
+                let leaf = document.createElement("img");
+                leaf.src = "https://upload.wikimedia.org/wikipedia/commons/3/3a/Leaf_icon.svg";
+                leaf.classList.add("jungle-element");
+                leaf.style.left = Math.random() * window.innerWidth + "px";
+                leaf.style.top = "-50px";
+                leaf.style.animation = `falling-leaf ${Math.random() * 5 + 3}s linear infinite`;
+                document.body.appendChild(leaf);
+            }
+        }
+
+        addFallingLeaves();
     </script>
 </body>
 </html>
